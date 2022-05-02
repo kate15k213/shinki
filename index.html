@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<title>Cafe</title>
+<meta name="description" content="ブレン">
+
+<!-- css---->
+<!-- <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"> -->
+<link rel="stylesheet" href="css/stylesheet.css">
+<link href="css/stylesheetscand.css" rel="stylesheet">
+<!-- <link href="css/style.css" rel="stylesheet"> -->
+<!-- favicon---->
+<script src="js/vendor/modernizr.custom.min.js"></script>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/news.js"></script>
+<!-- favicon---->
+<style>
+
+@charset "UTF-8";
+
+html {
+		font-size:100%;
+}
+body {
+	    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+	line-height:1.7;
+	color:#432;
+}
+a {
+	text-decoration:none;
+}
+img {
+	max-width: 100%;
+}
+/* ---logo wcbcafe----------------*/
+
+
+/*
+---------------*/
+
+/* 見出し*/
+.page-titlea{
+	margin-top: 0vw;
+	font-size: 3vw;
+	font-family:'philosopher', serif;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+.page-titleb{
+	margin-top: 0vw;
+	font-size: 2vw;
+	text-align: center;
+	font-family:'philosopher', serif;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.big-bg{
+background-size: cover;
+background-position: center top;
+background-repeat: no-repeat;
+}
+
+#home .page-title{
+ Text-transform: none;
+}
+.taitl{
+	position: absolute;
+	left: 40vw;
+  margin-top: 9vw;
+}
+/*
+/*NEWS
+--------------------*/
+#news {
+	position: absolute;
+	background-image: url(images/main-bg.jpg);
+	height: 24vw;
+	width: 100%;
+	background-color:#ffa500;
+	box-shadow: 0px 13px 13px -5px rgba(0,0,0,0.5);
+}
+
+/*フッター
+-------------*/
+footer{
+ position: absolute;
+ background: #432;
+text-align: center;
+width: 100%;
+height: 5vw;
+top: 105vw;
+}
+footer p{
+color:#fff;
+font-size:1vw;
+padding-top:2vw;
+}
+/*main
+-------------*/
+/*goukei
+-------------*/
+#goukei{
+	position: absolute;
+	top:26vw;
+	width: 100%;
+	background-color:#fffff0;
+	/* background-image: url(images/news-bg.jpg); */
+	height: 11vw;
+	border-bottom: solid 0.5vw #ffe000;
+}
+#tyuumonn{
+	position: absolute;
+	left:20vw;
+	top:2vw;
+	font-size: 3vw;
+}
+#kinngaku{
+	position: absolute;
+	left:56vw;
+	top:0.1vw;
+	font-size: 5vw;
+}
+#button{
+	position: absolute;
+	left:70vw;
+	top:3.1vw;
+}
+#buttona{
+	position: absolute;
+	left:70vw;
+	top:60.1vw;
+}
+.btn{
+	color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background: #cd853f;
+  padding: 2vw 4vw;
+	border-radius: 2vw;
+	font-size: 1.3vw;
+}
+.btn:hover{
+	color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+	opacity: 0.5;
+  padding: 2vw 4vw;
+	border-radius: 2vw;
+	font-size: 1.3vw;
+}
+.btna{
+	color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background: #cd853f;
+  padding: 2vw 4vw;
+	border-radius: 2vw;
+	font-size: 1.3vw;
+}
+.btna:hover{
+	color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background: #cd853f;
+  padding: 2vw 4vw;
+	opacity: 0.5;
+	border-radius: 2vw;
+	font-size: 1.3vw;
+}
+/*manu
+--------------------*/
+#manu{
+	position: absolute;
+	top:38vw;
+	width: 100%;
+	/* background-color:#b8860b; */
+	box-shadow: 0 0 18px gray;
+	/* background-image: url(images/news-bg.jpg); */
+	height: 66vw;
+	margin-bottom:1vw;
+	border-bottom: solid 3px #ffe000;
+}
+#manu1{
+	position: absolute;
+	border-top: solid 5px #c0c0c0;
+	top:0.01vw;
+	width: 100%;
+	background-color:#ffff;
+	/* background-image: url(images/news-bg.jpg); */
+	height: 18vw;
+	margin-bottom:1vw;
+	border-bottom: solid 5px #c0c0c0;
+	box-shadow: 0px 10px 10px -4px rgba(0,0,0,0.5);
+}
+#manu2{
+	position: absolute;
+	top:19vw;
+	width: 100%;
+	background-color:#fff;
+	box-shadow: 0 0 18px gray;
+	/* background-image: url(images/news-bg.jpg); */
+	height: 18vw;
+	margin-bottom:1vw;
+	box-shadow: 0px 10px 10px -4px rgba(0,0,0,0.5);
+}
+#manu3{
+	position: absolute;
+	top:38vw;
+	width: 100%;
+	background-color:#ffff;
+	/* background-image: url(images/news-bg.jpg); */
+	height: 18vw;
+	margin-bottom:1vw;
+	box-shadow: 0px 10px 10px -4px rgba(0,0,0,0.5);
+	border-bottom: solid 5px #c0c0c0;
+}
+#menu1g{
+	position: absolute;
+	top: 3vw;
+	left: 15vw;
+	width: 17vw;
+	height: 13vw;
+	border-radius: 0px;
+}
+#menu1p{
+	position: absolute;
+	top: 3vw;
+	left: 35vw;
+	width: 21vw;
+	height: 13vw;
+	border-radius: 0px;
+	font-size: 2.5vw;
+}
+#menu2p{
+	position: absolute;
+	top: 8vw;
+	left: 43vw;
+	width: 17vw;
+	height: 13vw;
+	border-radius: 0px;
+	font-size: 4vw;
+}
+
+/*ぼたん
+--------------------*/
+.container {
+	position: absolute;
+  left: 70vw;
+	top:6.5vw;
+  width: 0vw;
+	z-index: 1;
+}
+
+.field {
+  display: flex;
+}
+
+.inputtext {
+  color:rgba(43, 32, 32, 0.76) ;
+  font-size: 2.5vw;
+  border-left: 0;
+  border-right: 0;
+  width: 5vw;
+  line-height: 3vw;
+  text-align: center;
+  border: 1px solid #D7DBDD;
+  padding: 0,0.5vw;
+}
+
+.button {
+  color:rgba(43, 32, 32, 0.76) ;
+  font-size: 2.5vw;
+  cursor: pointer;
+  padding: 0.1vw 1vw;
+  background-color: white;
+  border: 0.5px solid #D7DBDD;
+  border-radius: 0;
+  outline: 0;
+}
+
+.resetbtn {
+  margin: 1vw 0 0 1.6vw;
+}
+/*ぼたんa
+--------------------*/
+.containera {
+	position: absolute;
+  left: 70vw;
+	top:6vw;
+  width: 0vw;
+	z-index: 1;
+}
+
+.fielda {
+  display: flex;
+}
+
+.inputtexta {
+  color:rgba(43, 32, 32, 0.76) ;
+  font-size: 2.5vw;
+  border-left: 0;
+  border-right: 0;
+  width: 5vw;
+  line-height: 3vw;
+  text-align: center;
+  border: 1px solid #D7DBDD;
+  padding: 0,0.5vw;
+}
+
+.buttona {
+  color:rgba(43, 32, 32, 0.76) ;
+  font-size: 2.5vw;
+  cursor: pointer;
+  padding: 0.1vw 1vw;
+  background-color: white;
+  border: 0.5px solid #D7DBDD;
+  border-radius: 0;
+  outline: 0;
+}
+
+.resetbtna {
+  margin: 1vw 0 0 1.6vw;
+}
+
+/*ぼたんb
+--------------------*/
+.containerb {
+	position: absolute;
+  left: 70vw;
+	top:6vw;
+  width: 0vw;
+	z-index: 1;
+}
+
+.fieldb {
+  display: flex;
+}
+
+.inputtextb {
+  color:rgba(43, 32, 32, 0.76) ;
+  font-size: 2.5vw;
+  border-left: 0;
+  border-right: 0;
+  width: 5vw;
+  line-height: 3vw;
+  text-align: center;
+  border: 1px solid #D7DBDD;
+  padding: 0,0.5vw;
+}
+
+.buttonb {
+  color:rgba(43, 32, 32, 0.76) ;
+  font-size: 2.5vw;
+  cursor: pointer;
+  padding: 0.1vw 1vw;
+  background-color: white;
+  border: 0.5px solid #D7DBDD;
+  border-radius: 0;
+  outline: 0;
+}
+
+.resetbtnb {
+  margin: 1vw 0 0 1.6vw;
+}
+
+/*
+---------------*/
+@media screen and (max-width: 800px)
+{
+	footer{
+	 position: absolute;
+	 background: #432;
+	text-align: center;
+	width: 100%;
+	height: 7vw;
+	top: 198vw;
+	}
+	footer p{
+	color:#fff;
+	font-size:1vw;
+	padding-top:2vw;
+	}
+	/* 見出し*/
+	.page-titlea{
+		margin-top: 3vw;
+		margin-left: -1.5vw;
+		font-size: 4.3vw;
+		font-family:'philosopher', serif;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+	.page-titleb{
+		margin-top: 0vw;
+		margin-left: -1.5vw;
+		font-size: 4vw;
+		font-family:'philosopher', serif;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+
+	.big-bg{
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	}
+
+	#home .page-title{
+	 Text-transform: none;
+	}
+	.taitl{
+		position: absolute;
+		left: 38vw;
+	  margin-top: 9vw;
+	}
+	/*
+	/*NEWS
+	--------------------*/
+	#news {
+		position: absolute;
+		background-image: url(images/cafe.jpg);
+		height: 40vw;
+		width: 100%;
+		background-color:#ffa500;
+		box-shadow: 0px 13px 13px -5px rgba(0,0,0,0.5);
+	}
+
+	/*main
+	-------------*/
+	/*goukei
+	-------------*/
+	#goukei{
+		position: absolute;
+		top:50vw;
+		width: 100%;
+		background-color:#fffff0;
+		/* background-image: url(images/news-bg.jpg); */
+		height: 20vw;
+		border-bottom: solid 0.5vw #ffe000;
+	}
+	#tyuumonn{
+		position: absolute;
+		left:20vw;
+		top:4vw;
+		font-size: 5vw;
+	}
+	#kinngaku{
+		position: absolute;
+		left:56vw;
+		top:2.1vw;
+		font-size: 7vw;
+	}
+	#button{
+		position: absolute;
+		left:70.5vw;
+		top:5.5vw;
+	}
+	#buttona{
+		position: absolute;
+		left:70vw;
+		top:110.1vw;
+	}
+	.btn{
+		color: #fff;
+	  text-decoration: none;
+	  font-weight: bold;
+	  background: #cd853f;
+	  padding: 2vw 5vw;
+		border-radius: 2vw;
+		font-size: 3.3vw;
+	}
+	.btn:hover{
+		color: #fff;
+		opacity: 0.5;
+	  text-decoration: none;
+	  font-weight: bold;
+	  background: #cd853f;
+	  padding: 2vw 5vw;
+		border-radius: 2vw;
+		font-size: 3.3vw;
+	}
+	.btna{
+		color: #fff;
+	  text-decoration: none;
+	  font-weight: bold;
+	  background: #cd853f;
+	  padding: 2vw 5vw;
+		border-radius: 2vw;
+		font-size: 3.3vw;
+	}
+	.btna:hover{
+		color: #fff;
+	  text-decoration: none;
+	  font-weight: bold;
+	  background: #cd853f;
+		opacity: 0.5;
+	  padding: 2vw 5vw;
+		border-radius: 2vw;
+		font-size: 3.3vw;
+	}
+	/*manu
+	--------------------*/
+	#manu{
+		position: absolute;
+		top:75vw;
+		width: 100%;
+		/* background-color:#b8860b; */
+		box-shadow: 0 0 18px gray;
+		/* background-image: url(images/news-bg.jpg); */
+		height: 66vw;
+		margin-bottom:1vw;
+		border-bottom: solid 3px #ffe000;
+	}
+	#manu1{
+		position: absolute;
+		border-top: solid 5px #c0c0c0;
+		top:0.01vw;
+		width: 100%;
+		background-color:#ffff;
+		/* background-image: url(images/news-bg.jpg); */
+		height: 32vw;
+		margin-bottom:1vw;
+		border-bottom: solid 5px #c0c0c0;
+		box-shadow: 0px 10px 10px -4px rgba(0,0,0,0.5);
+	}
+	#manu2{
+		position: absolute;
+		top:34vw;
+		width: 100%;
+		background-color:#fff;
+		box-shadow: 0 0 18px gray;
+		/* background-image: url(images/news-bg.jpg); */
+		height: 32vw;
+		margin-bottom:1vw;
+		box-shadow: 0px 10px 10px -4px rgba(0,0,0,0.5);
+	}
+	#manu3{
+		position: absolute;
+		top:72vw;
+		width: 100%;
+		background-color:#ffff;
+		/* background-image: url(images/news-bg.jpg); */
+		height: 32vw;
+		margin-bottom:1vw;
+		box-shadow: 0px 10px 10px -4px rgba(0,0,0,0.5);
+		border-bottom: solid 5px #c0c0c0;
+	}
+	#menu1g{
+		position: absolute;
+		top: 6vw;
+		left: 8vw;
+		width: 24vw;
+		height: 22vw;
+		border-radius: 0px;
+	}
+	#menu1p{
+		position: absolute;
+		top: 9vw;
+		left: 35vw;
+		width: 28vw;
+		height: 13vw;
+		border-radius: 0px;
+		font-size: 3.5vw;
+	}
+	#menu2p{
+		position: absolute;
+		top: 17vw;
+		left: 47vw;
+		width: 17vw;
+		height: 13vw;
+		border-radius: 0px;
+		font-size: 4vw;
+	}
+
+	/*ぼたん
+	--------------------*/
+	.container {
+		position: absolute;
+	  left: 70vw;
+		top:10vw;
+	  width: 0vw;
+		z-index: 1;
+	}
+
+	.field {
+	  display: flex;
+	}
+
+	.inputtext {
+	  color:rgba(43, 32, 32, 0.76) ;
+	  font-size: 5.5vw;
+	  border-left: 0;
+	  border-right: 0;
+	  width: 8vw;
+	  line-height: 3vw;
+	  text-align: center;
+	  border: 1px solid #D7DBDD;
+	  padding: 0,0.5vw;
+	}
+
+	.button {
+	  color:rgba(43, 32, 32, 0.76) ;
+	  font-size: 3.5vw;
+	  cursor: pointer;
+	  padding: 0.5vw 1vw;
+	  background-color: white;
+	  border: 0.5px solid #D7DBDD;
+	  border-radius: 0;
+	  outline: 0;
+	}
+
+	.resetbtn {
+	  margin: 1vw 0 0 1.6vw;
+	}
+
+	/*ぼたんa
+	--------------------*/
+	.containera {
+		position: absolute;
+		left: 70vw;
+		top:10vw;
+		width: 0vw;
+		z-index: 1;
+	}
+
+	.fielda {
+		display: flex;
+	}
+
+	.inputtexta {
+		color:rgba(43, 32, 32, 0.76) ;
+		font-size: 5.5vw;
+		border-left: 0;
+		border-right: 0;
+		width: 8vw;
+		line-height: 3vw;
+		text-align: center;
+		border: 1px solid #D7DBDD;
+		padding: 0,0.5vw;
+	}
+
+	.buttona {
+		color:rgba(43, 32, 32, 0.76) ;
+		font-size: 3.5vw;
+		cursor: pointer;
+		padding: 0.5vw 1vw;
+		background-color: white;
+		border: 0.5px solid #D7DBDD;
+		border-radius: 0;
+		outline: 0;
+	}
+	.resetbtna {
+		margin: 1vw 0 0 1.6vw;
+	}
+
+	/*ぼたん
+	--------------------*/
+	.containerb {
+		position: absolute;
+		left: 70vw;
+		top:10vw;
+		width: 0vw;
+		z-index: 1;
+	}
+
+	.fieldb {
+		display: flex;
+	}
+
+	.inputtextb {
+		color:rgba(43, 32, 32, 0.76) ;
+		font-size: 5.5vw;
+		border-left: 0;
+		border-right: 0;
+		width: 8vw;
+		line-height: 3vw;
+		text-align: center;
+		border: 1px solid #D7DBDD;
+		padding: 0,0.5vw;
+	}
+
+	.buttonb {
+		color:rgba(43, 32, 32, 0.76) ;
+		font-size: 3.5vw;
+		cursor: pointer;
+		padding: 0.5vw 1vw;
+		background-color: white;
+		border: 0.5px solid #D7DBDD;
+		border-radius: 0;
+		outline: 0;
+	}
+
+	.resetbtnb {
+		margin: 1vw 0 0 1.6vw;
+	}
+}
+
+</style>
+</head>
+<script>
+
+</script>
+
+<body>
+
+
+<div id="news" class="big-bg"><!--newsで画像読み込み　、big-bgで画像max表示  -->
+
+<div class="taitl">
+<h2 class="page-titlea">喫茶イベント室</h2>
+<h2 class="page-titleb">Table No.１</h2>
+</div><!---/.wrapper-->
+</div><!--/news-->
+
+<div id="goukei">
+<div id="tyuumonn"><p>注文合計</p></div>
+<div id="kinngaku"><p>0円</p></div>
+<div id=button><a href="#" class="btn">会計</a></div>
+</div>
+
+<div id="manu">
+<div id="manu1">
+	<img id="menu1g" src="images/menu1.jpg" alt="">
+	<div id="menu1p"><p>コーヒー</p></div>
+	<div id="menu2p"><p>円</p></div>
+	<div class="container">
+	  <div class="field">
+	    <button class="button" id="down">－</button>
+	    <input type="text" value="0" class="inputtext" id="textbox">
+	    <button class="button" id="up">＋</button>
+	  </div>
+	  　<!-- <button class="button resetbtn" id="reset">RESET</button> -->
+	</div>
+	  <script src="main.js"></script>
+</div>
+
+<div id="manu2">
+	<img id="menu1g" src="images/aisu.jpg" alt="">
+	<div id="menu1p"><p>アイスコーヒー</p></div>
+	<div id="menu2p"><p>円</p></div>
+
+	<div class="containera">
+	  <div class="fielda">
+	    <button class="buttona" id="downa">－</button>
+	    <input type="texta" value="0" class="inputtexta" id="textboxa">
+	    <button class="buttona" id="upa">＋</button>
+	  </div>
+	</div>
+
+</div>
+<div id="manu3">
+	<img id="menu1g" src="images/oreng.jpg" alt="">
+	<div id="menu1p"><p>オレンジジュース</p></div>
+	<div id="menu2p"><p>円</p></div>
+	<div class="containerb">
+	  <div class="fieldb">
+	    <button class="buttonb" id="downb">－</button>
+	    <input type="textb" value="0" class="inputtextb" id="textboxb">
+	    <button class="buttonb" id="upb">＋</button>
+	  </div>
+	</div>
+</div>
+ <div id=buttona><a href="" class="btna">注文</a></div>
+</div>
+
+<footer>
+ <div class="wrapper">
+<p><small>&copy; shintec hozumi</small></p>
+</footer>
+
+</body>
+ </html>
